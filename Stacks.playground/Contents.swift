@@ -14,3 +14,10 @@ example(of: "using a stack") {
     print("Popped: \(poppedElement)")
   }
 }
+
+example(of: "initializing a stack from an array") {
+  let array = ["A", "B", "C", "D"]
+  var stack = Stack(array)
+  print(stack)
+  stack.pop()
+}

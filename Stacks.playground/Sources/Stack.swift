@@ -14,6 +14,10 @@ public struct Stack<Element> {
   
   public init() { }
   
+  public init(_ elements: [Element]) {
+    storage = elements
+  }
+  
   public mutating func push(_ element: Element) {
     storage.append(element)
   }
