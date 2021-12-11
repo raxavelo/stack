@@ -27,3 +27,20 @@ example(of: "initializing a stack from an array literal") {
   print(stack)
   stack.pop()
 }
+
+/*
+ Challenge 1: Reverse an Array
+ 
+ Create a function that uses a stack to print the contents of an array in reversed order.
+ */
+
+func printReversed<T>(_ array: [T]){
+  var stack = Stack(array)
+  
+  while let value = stack.pop() {
+    print(value)
+  }
+}
+
+let array = [1, 2, 3, 4]
+printReversed(array)
