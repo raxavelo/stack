@@ -4,6 +4,14 @@
 public struct Stack<Element> {
   private var storage: [Element] = []
   
+  public var count: Int {
+    storage.count
+  }
+  
+  public var isEmpty: Bool {
+    peek() == nil
+  }
+  
   public init() { }
   
   public mutating func push(_ element: Element) {
@@ -13,6 +21,10 @@ public struct Stack<Element> {
   @discardableResult
   public mutating func pop() -> Element? {
     storage.popLast()
+  }
+  
+  public func peek() -> Element? {
+    storage.last
   }
 }
 
