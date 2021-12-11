@@ -32,12 +32,18 @@ public struct Stack<Element> {
   }
 }
 
-extension Stack:CustomDebugStringConvertible {
+extension Stack: CustomDebugStringConvertible {
   public var debugDescription: String {
     """
     ----top----
     \(storage.map { "\($0)" }.reversed().joined(separator: "\n"))
     -----------
     """
+  }
+}
+
+extension Stack: ExpressibleByArrayLiteral {
+  public init(arrayLiteral elements: Element...) {
+    storage = elements
   }
 }
